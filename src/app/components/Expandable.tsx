@@ -3,8 +3,8 @@
 import { ReactNode, useContext } from "react";
 import { GenericContext } from "../contexts/GenericContext";
 
-const Container = ({ children }: { children: ReactNode }) => {
-  const { showContent, toggle} = useContext(GenericContext);
+const Expandable = ({ children }: { children: ReactNode }) => {
+  const { showContent, toggle } = useContext(GenericContext);
 
   return (
     <div>
@@ -15,4 +15,4 @@ const Container = ({ children }: { children: ReactNode }) => {
   )
 }
 
-export default Container;
+export default Expandable;
