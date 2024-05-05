@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default async function About() {
+export default function ServerComponentError() {
   const [state, setState] = useState();
 
   return (
