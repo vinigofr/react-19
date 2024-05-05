@@ -21,3 +21,35 @@ export async function readFile() {
       console.log(`This is the ${FILE_NAME} content: ${data}`);
     });
 }
+
+export async function getGreetings(name: string): Promise<{
+  error: string | null,
+  message: string,
+}> {
+  if (!name.trim()) {
+    return { error: 'name is required', message: '' }
+  }
+
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({ error: null, message: `Hello ${name}` })
+    }, 1000);
+  });
+}
+
+export async function getGreetingsFormData(_: any, formData: FormData): Promise<{
+  error: string | null,
+  message: string,
+}> {
+  const name = formData.get('name')?.toString() || '';
+
+  if (!name.trim()) {
+    return { error: 'name is required', message: '' }
+  }
+
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({ error: null, message: `Hello ${name}` })
+    }, 1000);
+  });
+}
