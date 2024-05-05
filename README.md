@@ -19,4 +19,4 @@ Server Actions with Server Component: [`/examples/server-actions-server-componen
 
 Server Component Interaction: [`/examples/server-component-interaction`](http://localhost:3000/examples/server-component-interaction)
 
-Server Component Error: [`/examples/server-actions-server-component`](http://localhost:3000/examples/server-actions-server-component)
+:warn: Server Component Error (you need to restart the server after access): [`/examples/server-actions-server-component`](http://localhost:3000/examples/server-actions-server-component)
