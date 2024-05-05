@@ -1,16 +1,19 @@
 'use client';
 
-import { ReactNode, useContext } from "react";
-import { GenericContext } from "../contexts/GenericContext";
+import { ReactNode, useState } from "react";
 
 const Expandable = ({ children }: { children: ReactNode }) => {
-  const { showContent, toggle } = useContext(GenericContext);
+  const [expanded, setExpanded] = useState(true);
+
+  const toggleExpand = () => {
+    setExpanded((oldState) => !oldState);
+  };
 
   return (
     <div>
-      {showContent && children}
+      <button onClick={toggleExpand}>Toggle</button>
       <br />
-      <button onClick={toggle}>Toggle</button>
+      {expanded && children}
     </div>
   )
 }
