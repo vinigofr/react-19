@@ -1,4 +1,4 @@
-import Container from '../../components/Container';
+import Container from '../../components/Expandable';
 import { GitHubUserContent } from '../../components/GitHubUserContent';
 import { GenericProvider } from '../../contexts/GenericContext';
 
