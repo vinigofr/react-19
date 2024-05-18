@@ -33,11 +33,14 @@ export async function getGreetings(name: string): Promise<{
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve({ error: null, message: `Hello ${name}` })
-    }, 1000);
+    }, 5000);
   });
 }
 
-export async function getGreetingsFormData(_: any, formData: FormData): Promise<{
+export async function getGreetingsFormData(
+  _currentState: any,
+  formData: FormData,
+): Promise<{
   error: string | null,
   message: string,
 }> {
@@ -52,4 +55,11 @@ export async function getGreetingsFormData(_: any, formData: FormData): Promise<
       resolve({ error: null, message: `Hello ${name}` })
     }, 1000);
   });
+}
+
+let value = 0;
+export async function incrementNumber() {
+  console.log({ value })
+  value++;
+  return value;
 }
